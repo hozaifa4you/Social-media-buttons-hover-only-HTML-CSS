@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a3d62;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main a {
+    //color: red;
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 24px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, .15), -6px -6px 12px rgba(255, 255, 255, .1);
+    transition: .3s linear;
+    position: relative;
+}
+
+.main a:hover {
+    transform: scale(1.3);
+    border-radius: 50%;
+}
+
+.main a i::before {
+    position: absolute;
+    background-size: 200% 200%;
+    background-position: 75% 75%;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    top: 0;
+    left: 0;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background .3s linear;
+}
+
+.main a:hover i::before {
+    background-position: 0% 0%;
+}
+
+.fa-facebook-f::before {
+    background-image: linear-gradient(135deg, #4267B2 30%, #0a3d62 50%);
+}
+
+.fa-twitter::before {
+    background-image: linear-gradient(135deg, #1da1f2 30%, #0a3d62 50%);
+}
+
+.fa-instagram::before {
+    background-image: linear-gradient(135deg, #e4405f 30%, #0a3d62 50%);
+}
+
+.fa-youtube::before {
+    background-image: linear-gradient(135deg, #cd201f 30%, #0a3d62 50%);
+}
+
+.fa-linkedin::before {
+    background-image: linear-gradient(135deg, #0077B5 30%, #0a3d62 50%);
+}
